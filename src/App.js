@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="App">
     <NavInshorts setcategory={setCategory}/>
-    <NewsContent/>
+    <NewsContent newsArray={newsArray} newsResults={newsResults}/>
     <Footer/>
     </div>
   );

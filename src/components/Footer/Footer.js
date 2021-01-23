@@ -21,7 +21,7 @@ const Footer = () => {
           <i className="fab fa-linkedin fa-2x"></i>
         </a>
         <a href="https://pranikz.ml/" target="__blank">
-        <i class="fab fa-globe fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-globe fa-2x" aria-hidden="true"></i>
         </a>
       </div>
     </div>
