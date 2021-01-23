@@ -4,7 +4,7 @@ import { useEffect, useState  } from "react";
 import NewsContent from './components/NewsContent/NewsContent';
 import Footer from './components/Footer/Footer';
 import axios from 'axios';
-import apikey from './data/config';
+// import apikey from './data/config';
 
 function App() {
 
