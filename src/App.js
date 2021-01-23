@@ -15,9 +15,11 @@ function App() {
 
 
   const newsApi = async() => {
+
     try {
 
-      const news = await axios.get(`http://newsapi.org/v2/top-headlines?country=in&apiKey=${apikey}&category=${category}&pageSize=${loadMore}`);
+      const proxyUrl="https://cors-anywhere.herokuapp.com/";
+      const news = await axios.get(`http://${proxyUrl}newsapi.org/v2/top-headlines?country=in&apiKey=${apikey}&category=${category}&pageSize=${loadMore}`);
       setNewsArray(news.data.articles);
       setNewsResults(news.data.totalResults);
     } catch (error) {
@@ -27,6 +29,7 @@ function App() {
 
   useEffect(() => {
     newsApi();
+    // eslint-disable-next-line
   }, [newsResults, category, loadMore]);
 
   return (
