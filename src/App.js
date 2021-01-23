@@ -17,7 +17,7 @@ function App() {
   const newsApi = async() => {
     try {
 
-      const news = await axios.get(`http://newsapi.org/v2/top-headlines?country=in&apiKey=${apikey}&category=${category}`);
+      const news = await axios.get(`http://newsapi.org/v2/top-headlines?country=in&apiKey=${apikey}&category=${category}&pageSize=${loadMore}`);
       setNewsArray(news.data.articles);
       setNewsResults(news.data.totalResults);
     } catch (error) {
@@ -27,7 +27,7 @@ function App() {
 
   useEffect(() => {
     newsApi();
-  }, [newsResults, category]);
+  }, [newsResults, category, loadMore]);
 
   return (
     <div className="App">
