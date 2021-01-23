@@ -23,8 +23,10 @@ const NewsContent = ({ newsArray, loadMore, setLoadMore, newsResults }) => {
           />
         </div>
 
+        {console.log(newsArray)}
+
         {/* First this */}
-        {newsArray.map((newsItem) => (
+        {newsArray.slice(0, loadMore).map((newsItem, i) => (
           <NewsCard newsItem={newsItem} key={newsItem.title} />
         ))}
 
